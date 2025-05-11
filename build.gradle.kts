@@ -41,7 +41,5 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.41.2.2") // SQLite JDBC
 
 
-
-
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
