@@ -1,5 +1,6 @@
 val kotlin_version: String by project
 val logback_version: String by project
+val swagger_codegen_version: String by project
 
 plugins {
     kotlin("jvm") version "2.1.10"
@@ -19,6 +20,7 @@ application {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://jcenter.bintray.com/") }
 }
 
 dependencies {
@@ -33,6 +35,11 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml")
     testImplementation("io.ktor:ktor-server-test-host")
 
+
+
+    //CallLogging
+    implementation("io.ktor:ktor-server-call-logging:3.1.2") // Call logging
+
     // DB
 
 
@@ -41,6 +48,10 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:0.39.1") // JDBC support
     implementation("org.xerial:sqlite-jdbc:3.41.2.2") // SQLite JDBC
 
+    //openapi
+    implementation("io.ktor:ktor-server-openapi:2.3.4")        // OpenAPI spec generation
+    implementation("io.ktor:ktor-server-swagger:2.3.4")        // Swagger UI support
+    implementation("io.ktor:ktor-server-resources:2.3.4")      // Needed for describing resources
 
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
