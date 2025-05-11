@@ -26,6 +26,7 @@ dependencies {
     implementation("io.ktor:ktor-server-jetty-jakarta")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-server-core")
+    implementation("io.ktor:ktor-server-cors:2.3.4")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
     implementation("io.ktor:ktor-server-content-negotiation:2.3.4")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
