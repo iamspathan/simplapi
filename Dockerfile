@@ -4,8 +4,8 @@ FROM openjdk:17-jdk-slim
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the jar file into the container
-COPY build/libs/simplapi.jar app.jar
+# Copy the built jar file into the container
+COPY build/libs/simplapi-0.0.1.jar app.jar
 
 # Expose port 8080 (default for Ktor)
 EXPOSE 8080
